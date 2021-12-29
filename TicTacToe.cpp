@@ -9,25 +9,36 @@ void design()
 {
     settextstyle(10,0,6);	// to modify the size, direction ans font of text
     int w=textwidth("Tic Tac Toe"); 	// to find the width of the text
+    setcolor(14);
     outtextxy((400-w)/2,80,"Tic Tac Toe");	// To write the text to the given cordinates
 	
+	setcolor(3);
 	// three line function is used to increase the width of the tic tac toe board
 	line(160,220,160,460);
 	line(160+1,220,160+1,460);
+	line(160+2,220,160+2,460);
 	line(160-1,220,160-1,460);
+	line(160-2,220,160-2,460);
 
 	line(80,300,320,300);
 	line(80,300+1,320,300+1);
+	line(80,300+2,320,300+2);
 	line(80,300-1,320,300-1);
+	line(80,300-2,320,300-2);
 
 	line(80,380,320,380);
 	line(80,380+1,320,380+1);
+	line(80,380+2,320,380+2);
 	line(80,380-1,320,380-1);
+	line(80,380-2,320,380-2);
 
 	line(240,220,240,460);
 	line(240+1,220,240+1,460);
+	line(240+2,220,240+2,460);
 	line(240-1,220,240-1,460);
+	line(240-2,220,240-2,460);
 
+	setcolor(14);
     settextstyle(10,0,2);
     int h=textheight("By Amit and Chetan");
     w=textwidth("By Amit and Chetan");
@@ -40,10 +51,12 @@ void dis(int turn, int p)
     settextstyle(10,0,6);
     int w=0,h=0;
     if(turn==1){
+    	setcolor(11);
         h=textheight("X");
         w=textwidth("X");
     }
     else{
+    	setcolor(5);
         h=textheight("O");
         w=textwidth("O");
     }
@@ -143,6 +156,7 @@ int main()
 {
     //Tic Tac Toe
     initwindow(400,600,"Tic Tac Toe");
+//    setbkcolor(9);
     
     // To create board
     design();
@@ -292,16 +306,19 @@ int main()
     }
     printf("Thank You !!");
     if(x==1){
+    	setcolor(11);
         settextstyle(10,0,3);
         int w=textwidth("Player 1 Wins !!");
-        outtextxy((400-w)/2,500,"You Wins !!");
+        outtextxy((400-w)/2,500,"Player 1 Wins !!");
     }
     else if(x==2){
+    	setcolor(5);
         settextstyle(10,0,3);
         int w=textwidth("Player 2 Wins !!");
-        outtextxy((400-w)/2,500,"Computer Wins !!");
+        outtextxy((400-w)/2,500,"Player 2 Wins !!");
     }
     else if(x==0){
+    	setcolor(10);
         settextstyle(10,0,3);
         int w=textwidth("Its a Draw !!");
         outtextxy((400-w)/2,500,"Its a Draw !!");
